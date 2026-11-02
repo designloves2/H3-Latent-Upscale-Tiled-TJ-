@@ -1,0 +1,14 @@
+[project]
+name = "comfyui-tj_latent_upscale_tiled"
+description = "H3 Latent Upscale Tiled (TJ): 3D latent upscaler for MiniMax H3 (1 MP to 4K) and a dual scheduler. A modified copy of ComfyUI-Kimchy-Minimax-H3-Suite (Apache-2.0)."
+version = "0.1.0"
+license = { file = "LICENSE" }
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/designloves2/H3-Latent-Upscale-Tiled-TJ-"
+
+[tool.comfy]
+PublisherId = "designloves2"
+DisplayName = "ComfyUI TJ Latent Upscale Tiled"
+Icon = ""
