@@ -10,7 +10,7 @@ Changes made by designloves2 (2026-11):
   - Node ids, class names, module and file names, display names, categories, log prefixes and the web extension name
     were renamed so this pack and the original one can be installed side by side:
       KimchyH3ZeroSplitMP   -> TJLatentUpscaleTiledMP   ("H3 Latent Upscale Tiled (TJ)")
-      KimchyH3ZeroSplitV2   -> TJLatentUpscaleTiledV2   ("H3 Latent Upscale Tiled V2 (TJ)")
+      KimchyH3ZeroSplitV2   -> TJLatentUpscaleV2   ("H3 Latent Upscale V2 (TJ)")
       KimchyH3DualScheduler -> TJH3DualScheduler        ("H3 Dual Scheduler (TJ)")
   - tj_latent_upscale_tiled_mp.py, TJLatentUpscaleTiledMP / forward_feather_adaptive: the window is computed on the
     model's device instead of the input's device, and a clip no longer than one window is moved there too. For large

@@ -106,7 +106,7 @@ def unwrap_to_latent_dict(obj) -> dict:
         return obj
     if torch.is_tensor(obj) or hasattr(obj, "tensors") or getattr(obj, "is_nested", False):
         return {"samples": obj}
-    raise TypeError(f"[TJ Latent Upscale Tiled V2] Invalid latent container type: {type(obj)}")
+    raise TypeError(f"[TJ Latent Upscale V2] Invalid latent container type: {type(obj)}")
 
 
 # ==============================================================================
@@ -350,7 +350,7 @@ def run_standalone_3d_latent_upscale(
     missing, unexpected = upscaler.load_state_dict(sd, strict=False)
     del sd
     if missing:
-        print(f"[TJ-LatentUpscaleTiledV2] Missing keys: {missing}")
+        print(f"[TJ-LatentUpscaleV2] Missing keys: {missing}")
 
     upscaler.eval().to(device=device, dtype=target_dtype)
 
@@ -519,9 +519,9 @@ def apply_safe_video_color_match(video_tensor: torch.Tensor, ref_video_cpu: torc
 
 
 # ==============================================================================
-# 5. 배포용 통합 노드: TJLatentUpscaleTiledV2 (V2.7)
+# 5. 배포용 통합 노드: TJLatentUpscaleV2 (V2.7)
 # ==============================================================================
-class TJLatentUpscaleTiledV2:
+class TJLatentUpscaleV2:
     @classmethod
     def INPUT_TYPES(cls):
         safetensors_list = get_all_upscaler_safetensors()
